@@ -10,7 +10,7 @@ Tener instalado [latino](https://github.com/primitivorm/latino)
 git clone https://github.com/primitivorm/latino-json
 cd latino-json
 git submodule update --init --recursive
-chmod +x instalar.sh
+sudo chmod +x instalar.sh
 sudo bash instalar.sh
 ```
 
