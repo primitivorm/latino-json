@@ -1,11 +1,19 @@
-### latino-json
+## latino-json
+
 Librería dinámica para manejo de json en [latino](https://github.com/primitivorm/latino)
 
-##### Prerequisitos
-Tener instalado [latino](https://github.com/primitivorm/latino)
+## Instalación
 
-### Instalación
-##### linux
+### Linux / Mac
+
+#### Prerequisitos
+
+Tener instalado:
+[latino](https://github.com/primitivorm/latino)
+[cmake](https://cmake.org/download/)
+
+Ejecutar lo siguiente en bash:
+
 ```
 git clone https://github.com/primitivorm/latino-json
 cd latino-json
@@ -14,10 +22,32 @@ sudo chmod +x instalar.sh
 sudo bash instalar.sh
 ```
 
-#### Dependecias
-[jansson](https://github.com/akheron/jansson)
+### Windows
 
-##### Uso de esta librería en código latino
+#### Prerequisitos
+
+Tener instalado:
+[latino](https://github.com/primitivorm/latino)
+[cmake](https://cmake.org/download/)
+[visual studio](https://visualstudio.microsoft.com/es/vs/community/)
+
+Ejecutar lo siguiente en cmd:
+
+```
+git clone https://github.com/primitivorm/latino-json
+cd latino-json
+git submodule update --init --recursive
+md build
+cd build
+cmake -G "Visual Studio 16 2019" -DCMAKE_BUILD_TYPE=Release ..\
+```
+
+Abrir con visual studio 2019 y compilar la solucion latino-json.sln
+Para instalar la libreria abrir visual studio con permisos de administrador
+Generar el proyecto de INSTALL.vcxproj
+
+### Uso de esta librería en código latino
+
 ```
 //necesario para agregar la librería dinamica
 incluir("json")
@@ -38,4 +68,8 @@ escribir(cad)
 
 ```
 
-##### Cualquier aportación o sugerencia es bienvenida
+### Dependecias
+
+[jansson](https://github.com/akheron/jansson)
+
+#### Cualquier aportación o sugerencia es bienvenida
